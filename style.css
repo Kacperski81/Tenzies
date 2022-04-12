@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: #0B2434;
+  /* background-color: red; */
+}
+
+main {
+  margin: 0 auto;
+  background-color: #F5F5F5;
+  max-width: 400px;
+  height: 400px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.title {
+  font-size: 40px;
+  margin: 0;
+  margin-bottom: .2em;
+  font-family: 'Karla', sans-serif;
+  color: #2B283A;
+}
+
+.instructions,
+.number-of-rolls {
+  margin-top: 0;
+  text-align: center;
+  padding: 0 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.number-of-rolls {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.dice-container {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(5, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+
+
+.dice {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.25);
+  cursor: pointer;
+}
+
+.dot {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+.first-face {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.second-face {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+
+}
+
+.second-face .dot:last-child {
+  align-self: flex-end;
+}
+
+.third-face {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.third-face .dot:nth-of-type(2) {
+  align-self: center;
+}
+
+.third-face .dot:nth-of-type(3) {
+  align-self: flex-end;
+}
+
+.four-face {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.four-face .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fifth-face {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.fifth-face .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fifth-face .column:nth-of-type(2) {
+  align-self: center;
+}
+
+.sixth-face {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.sixth-face .column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.roll-dice {
+  height: 50px;
+  width: 100px;
+  border: none;
+  border-radius: 6px;
+  background-color: #5035FF;
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1rem;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.roll-dice:focus {
+  outline : none;
+}
+
+.roll-dice:active {
+  box-shadow: inset 5px 5px 10px -3px rgba(0,0,0,0.7);
+}
